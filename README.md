@@ -95,7 +95,7 @@ This portfolio includes a smart AI assistant that can answer questions about:
 
 ## 📬 Contact Me
 
-* 📧 Email: [your-email@example.com](binitnayak00@gmail.com)
+* 📧 Email: [binitnayak00@gmail.com](binitnayak00@gmail.com)
 * 💼 GitHub: https://github.com/binitnayak
 
 ---
