@@ -47,7 +47,10 @@ Hi! I'm **Binit**, a B.Tech student and passionate MERN Stack Developer.
 
 ## 📸 Screenshots
 
-(Add your screenshots here)
+<img width="1897" height="970" alt="image" src="https://github.com/user-attachments/assets/4e305b08-a68a-45bc-9ece-8be76a40b5f0" />
+<img width="1902" height="967" alt="image" src="https://github.com/user-attachments/assets/c8b88f9f-b245-47e7-87ff-212da8843caa" />
+
+
 
 ---
 
@@ -92,7 +95,7 @@ This portfolio includes a smart AI assistant that can answer questions about:
 
 ## 📬 Contact Me
 
-* 📧 Email: [your-email@example.com](mailto:your-email@example.com)
+* 📧 Email: [your-email@example.com](binitnayak00@gmail.com)
 * 💼 GitHub: https://github.com/binitnayak
 
 ---
