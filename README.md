@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Binit's Interactive Portfolio
 
-## Getting Started
+🚀 A modern, interactive portfolio website built with cutting-edge web technologies, featuring 3D experiences and an AI-powered assistant.
 
-First, run the development server:
+---
+
+## 🧑‍💻 About Me
+
+Hi! I'm **Binit**, a B.Tech student and passionate MERN Stack Developer.
+
+* 🎓 B.Tech Student
+* 📊 CGPA: 8.09
+* 💻 MERN Stack Developer
+* 🎨 Exploring WebGL & 3D Web Experiences
+
+---
+
+## 🛠️ Tech Stack
+
+### 🚀 Frontend
+
+* React.js
+* Next.js
+* Three.js (WebGL)
+* Tailwind CSS
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Database
+
+* MongoDB
+
+---
+
+## ✨ Features
+
+* 🎨 Interactive 3D WebGL Experience
+* 🤖 AI Chatbot Assistant
+* 📱 Fully Responsive Design
+* ⚡ Smooth Animations & Scrolling
+* 🌙 Modern UI/UX
+
+---
+
+## 📸 Screenshots
+
+(Add your screenshots here)
+
+---
+
+## 🔗 Live Demo
+
+👉 https://your-portfolio-link.vercel.app
+
+---
+
+## 📂 Getting Started
+
+### Clone the repo
+
+```bash
+git clone https://github.com/binitnayak/portfolio.git
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤖 AI Chatbot
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This portfolio includes a smart AI assistant that can answer questions about:
 
-## Learn More
+* Skills
+* Projects
+* Education
+* Contact information
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contact Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* 📧 Email: [your-email@example.com](mailto:your-email@example.com)
+* 💼 GitHub: https://github.com/binitnayak
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⭐ Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you like this project, give it a ⭐ on GitHub and share it!
+
+---
+
+## 📌 Future Improvements
+
+* Add more AI capabilities
+* Improve animations
+* Add blog section
+
+---
+
+## 🧠 Inspiration
+
+Inspired by modern web experiences and interactive portfolio designs.
+
+---
