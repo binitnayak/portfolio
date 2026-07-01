@@ -148,7 +148,7 @@ export default function Contact() {
             Contact Me
           </h2>
           <p className="text-lg text-gray-300 max-w-xl mx-auto">
-            Have a project in mind? Let's collaborate and create something amazing together.
+            Have a project in mind? Let&apos;s collaborate and create something amazing together.
           </p>
         </motion.div>
 
@@ -268,7 +268,7 @@ export default function Contact() {
 
             {/* Form note */}
             <p className="text-xs text-gray-400 text-center">
-              I'll get back to you as soon as possible. Usually within 24 hours.
+              I&apos;ll get back to you as soon as possible. Usually within 24 hours.
             </p>
           </form>
         </motion.div>

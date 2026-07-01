@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.197",
+    "@google/generative-ai": "^0.24.1",
+    "ai": "^6.0.195",
     "framer-motion": "^11.18.2",
     "gsap": "^3.15.0",
     "next": "14.2.35",
     "openai": "^6.41.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.6.0"
+    "react-icons": "^5.6.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

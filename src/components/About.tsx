@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { FiDownload, FiArrowRight, FiDatabase, FiCpu, FiTrendingUp } from 'react-icons/fi';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -171,7 +170,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6" style={{ transform: 'translateZ(20px)' }}>
-                Hi, I'm <span className="font-bold text-white">Binit</span> — a <span className="text-blue-400 font-semibold">B.Tech Computer Science student</span> and a passionate <span className="text-purple-400 font-semibold">MERN Stack Developer</span>.
+                Hi, I&apos;m <span className="font-bold text-white">Binit</span> — a <span className="text-blue-400 font-semibold">B.Tech Computer Science student</span> and a passionate <span className="text-purple-400 font-semibold">MERN Stack Developer</span>.
               </p>
               
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed" style={{ transform: 'translateZ(10px)' }}>
@@ -285,26 +284,26 @@ export default function About() {
                   {/* Syntax Highlighted Code block */}
                   <div className="flex-1 whitespace-pre space-y-1 text-[11px] md:text-xs">
                     <div>
-                      <span className="text-pink-500">import</span> &#123; <span className="text-blue-400">Developer</span> &#125; <span className="text-pink-500">from</span> <span className="text-emerald-300">'creative-coder'</span>;
+                      <span className="text-pink-500">import</span> &#123; <span className="text-blue-400">Developer</span> &#125; <span className="text-pink-500">from</span> <span className="text-emerald-300">&apos;creative-coder&apos;</span>;
                     </div>
                     <div>&nbsp;</div>
                     <div>
                       <span className="text-pink-500">const</span> <span className="text-purple-400">binit</span> = <span className="text-pink-500">new</span> <span className="text-blue-400">Developer</span>(&#123;
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">name:</span> <span className="text-emerald-300">'Binit'</span>,
+                      &nbsp;&nbsp;<span className="text-gray-400">name:</span> <span className="text-emerald-300">&apos;Binit&apos;</span>,
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">role:</span> <span className="text-emerald-300">'MERN Stack Developer'</span>,
+                      &nbsp;&nbsp;<span className="text-gray-400">role:</span> <span className="text-emerald-300">&apos;MERN Stack Developer&apos;</span>,
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">education:</span> <span className="text-emerald-300">'B.Tech in CSE'</span>,
+                      &nbsp;&nbsp;<span className="text-gray-400">education:</span> <span className="text-emerald-300">&apos;B.Tech in CSE&apos;</span>,
                     </div>
                     <div>
                       &nbsp;&nbsp;<span className="text-gray-400">cgpa:</span> <span className="text-amber-400">8.09</span>,
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">location:</span> <span className="text-emerald-300">'India'</span>
+                      &nbsp;&nbsp;<span className="text-gray-400">location:</span> <span className="text-emerald-300">&apos;India&apos;</span>
                     </div>
                     <div>
                       &#125;);
@@ -314,13 +313,13 @@ export default function About() {
                       <span className="text-purple-400">binit</span>.<span className="text-yellow-400">build</span>(&#123;
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">frontend:</span> [<span className="text-emerald-300">'React'</span>, <span className="text-emerald-300">'Next.js'</span>, <span className="text-emerald-300">'Tailwind'</span>],
+                      &nbsp;&nbsp;<span className="text-gray-400">frontend:</span> [<span className="text-emerald-300">&apos;React&apos;</span>, <span className="text-emerald-300">&apos;Next.js&apos;</span>, <span className="text-emerald-300">&apos;Tailwind&apos;</span>],
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">backend:</span> [<span className="text-emerald-300">'Node.js'</span>, <span className="text-emerald-300">'Express'</span>, <span className="text-emerald-300">'MongoDB'</span>],
+                      &nbsp;&nbsp;<span className="text-gray-400">backend:</span> [<span className="text-emerald-300">&apos;Node.js&apos;</span>, <span className="text-emerald-300">&apos;Express&apos;</span>, <span className="text-emerald-300">&apos;MongoDB&apos;</span>],
                     </div>
                     <div>
-                      &nbsp;&nbsp;<span className="text-gray-400">animations:</span> [<span className="text-emerald-300">'GSAP'</span>, <span className="text-emerald-300">'FramerMotion'</span>]
+                      &nbsp;&nbsp;<span className="text-gray-400">animations:</span> [<span className="text-emerald-300">&apos;GSAP&apos;</span>, <span className="text-emerald-300">&apos;FramerMotion&apos;</span>]
                     </div>
                     <div>
                       &#125;);<span className="w-1.5 h-3.5 bg-blue-500 inline-block ml-1 animate-pulse vertical-align-middle"></span>

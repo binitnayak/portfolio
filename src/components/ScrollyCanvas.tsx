@@ -6,33 +6,56 @@ import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 export default function ScrollyCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const requestRef = useRef<number>();
   
   const frameCount = 75; // 0 to 74
 
   useEffect(() => {
-    // Preload images
-    const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
+    const loadedImages: HTMLImageElement[] = new Array(frameCount);
+    let isCancelled = false;
     
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
-      // Format: frame_00_delay-0.066s.webp, etc.
-      const frameIndex = i.toString().padStart(2, '0');
-      img.src = `/sequence/frame_${frameIndex}_delay-0.066s.webp`;
-      img.onload = () => {
+      const frameIndexStr = i.toString().padStart(2, '0');
+      img.src = `/sequence/frame_${frameIndexStr}_delay-0.066s.webp`;
+      
+      const checkAndSetLoaded = () => {
         loadedCount++;
-        if (loadedCount === frameCount) {
-          setImages(loadedImages);
+        if (loadedCount === frameCount && !isCancelled) {
+          imagesRef.current = loadedImages;
+          setIsLoaded(true);
           // Draw first frame once loaded
           if (canvasRef.current) {
              const ctx = canvasRef.current.getContext('2d');
-             if (ctx) drawImageCover(ctx, loadedImages[0], canvasRef.current);
+             if (ctx && loadedImages[0].complete && loadedImages[0].naturalWidth > 0) {
+               drawImageCover(ctx, loadedImages[0], canvasRef.current);
+             }
           }
         }
       };
-      loadedImages.push(img);
+
+      img.onload = () => {
+        if (isCancelled) return;
+        loadedImages[i] = img;
+        checkAndSetLoaded();
+      };
+
+      img.onerror = () => {
+        if (isCancelled) return;
+        loadedImages[i] = img; // Store broken image to keep sequence length intact
+        checkAndSetLoaded();
+      };
     }
+
+    return () => {
+      isCancelled = true;
+      if (requestRef.current) {
+        cancelAnimationFrame(requestRef.current);
+      }
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -42,14 +65,24 @@ export default function ScrollyCanvas() {
 
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, frameCount - 1]);
 
-  useMotionValueEvent(frameIndex, 'change', (latest) => {
+  const renderFrame = (index: number) => {
+    const images = imagesRef.current;
     if (images.length === frameCount && canvasRef.current) {
-      const index = Math.round(latest);
       const ctx = canvasRef.current.getContext('2d');
-      if (ctx && images[index]) {
-        drawImageCover(ctx, images[index], canvasRef.current);
+      const img = images[index];
+      if (ctx && img && img.complete && img.naturalWidth > 0) {
+        drawImageCover(ctx, img, canvasRef.current);
       }
     }
+  };
+
+  useMotionValueEvent(frameIndex, 'change', (latest) => {
+    if (requestRef.current) {
+      cancelAnimationFrame(requestRef.current);
+    }
+    requestRef.current = requestAnimationFrame(() => {
+      renderFrame(Math.round(latest));
+    });
   });
 
   // Helper to draw image like object-fit: cover
@@ -77,15 +110,14 @@ export default function ScrollyCanvas() {
   useEffect(() => {
     const handleResize = () => {
       if (canvasRef.current) {
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
+        // Scale canvas for high DPI displays (Retina screens)
+        canvasRef.current.width = window.innerWidth * dpr;
+        canvasRef.current.height = window.innerHeight * dpr;
+        
         // Redraw current frame
-        if (images.length > 0) {
-          const index = Math.round(frameIndex.get());
-          const ctx = canvasRef.current.getContext('2d');
-          if (ctx && images[index]) {
-            drawImageCover(ctx, images[index], canvasRef.current);
-          }
+        if (isLoaded) {
+          renderFrame(Math.round(frameIndex.get()));
         }
       }
     };
@@ -93,12 +125,16 @@ export default function ScrollyCanvas() {
     handleResize(); // Initial sizing
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [images, frameIndex]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoaded, frameIndex]);
 
   return (
     <div ref={containerRef} className="relative h-[500vh] bg-[#121212]">
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+        <canvas 
+          ref={canvasRef} 
+          className="absolute inset-0 w-full h-full will-change-transform" 
+        />
       </div>
     </div>
   );

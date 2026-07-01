@@ -43,7 +43,7 @@ export default function Overlay() {
           </motion.div>
           
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight">
-            <span className="text-white">Hi, I'm Binit</span>
+            <span className="text-white">Hi, I&apos;m Binit</span>
           </h1>
           
           <p className="text-2xl md:text-3xl text-blue-300 font-semibold mb-4 tracking-wide">MERN Stack Developer</p>
