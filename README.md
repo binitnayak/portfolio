@@ -3,15 +3,8 @@
 🚀 A modern, interactive portfolio website built with cutting-edge web technologies, featuring 3D experiences and an AI-powered assistant.
 
 ---
-# 📌 Internship Details
 
-| Field | Details |
-|-------|---------|
-| **Intern ID** | CITS2334 |
-| **Full Name** | Binit Nayak |
-| **No. of Weeks** | 1 Week (5 Days) |
-| **Project Name** | Interactive Portfolio |
-| **Project Scope** | Developed a modern interactive portfolio with 3D experiences, AI chatbot integration, responsive design, and smooth animations to showcase skills, projects, and contact information. |
+
 
 ## 🧑‍💻 About Me
 
