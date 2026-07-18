@@ -80,3 +80,61 @@ html {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
+
+/* Skills editor: shimmer sweep across progress bars */
+@keyframes shine-sweep-move {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
+
+.shine-sweep {
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 80%
+  );
+  width: 40%;
+  animation: shine-sweep-move 2.2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Skills editor: blinking text-cursor at end of code */
+@keyframes cursor-blink-fade {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.cursor-blink {
+  animation: cursor-blink-fade 1.1s step-end infinite;
+}
+
+/* Skills editor: pulsing halo glow behind the spotlight icon */
+@keyframes icon-halo-pulse {
+  0%, 100% { transform: scale(0.9); opacity: 0.35; }
+  50% { transform: scale(1.2); opacity: 0.65; }
+}
+
+.icon-halo {
+  animation: icon-halo-pulse 2.4s ease-in-out infinite;
+}
+
+/* Skills marquee: two seamless infinite-loop rows moving opposite directions */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 32s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 38s linear infinite;
+}
