@@ -1,138 +1,3 @@
-// 'use client';
-
-// import { motion } from 'framer-motion';
-
-// const projects = [
-//   { title: 'Project One', category: 'WebGL Experience', description: 'Interactive 3D visualization with smooth animations' },
-//   { title: 'Project Two', category: 'E-commerce Platform', description: 'Full-stack solution with real-time updates' },
-//   { title: 'Project Three', category: 'Brand Identity', description: 'Modern design system and component library' },
-//   { title: 'Project Four', category: 'Mobile App', description: 'Cross-platform mobile application' },
-// ];
-
-// export default function Projects() {
-//   const containerVariants = {
-//     hidden: { opacity: 0 },
-//     visible: {
-//       opacity: 1,
-//       transition: {
-//         staggerChildren: 0.1,
-//         delayChildren: 0.2,
-//       },
-//     },
-//   };
-
-//   const itemVariants = {
-//     hidden: { opacity: 0, y: 20 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: { duration: 0.6 },
-//     },
-//   };
-
-//   return (
-//     <section 
-//       id="projects-section"
-//       className="relative z-20 bg-gradient-to-b from-[#0a0e27] via-[#111a3d] to-[#0a0e27] py-24 px-6 md:px-12 text-white overflow-hidden"
-//     >
-//       {/* Background elements */}
-//       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
-//       <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl -z-10"></div>
-      
-//       <div className="max-w-6xl mx-auto">
-//         {/* Section Header */}
-//         <motion.div
-//           initial={{ opacity: 0, y: -20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           viewport={{ once: true }}
-//           className="mb-16"
-//         >
-//           <div className="inline-block mb-4">
-//             <span className="px-4 py-2 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-300 text-sm font-medium backdrop-blur-sm">
-//               Portfolio
-//             </span>
-//           </div>
-//           <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-4 gradient-text">Selected Work</h2>
-//           <p className="text-lg text-gray-300 max-w-2xl">
-//             A collection of recent projects showcasing my expertise in full-stack development and modern web technologies.
-//           </p>
-//         </motion.div>
-        
-//         <motion.div
-//           variants={containerVariants}
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true }}
-//           className="grid grid-cols-1 md:grid-cols-2 gap-6"
-//         >
-//           {projects.map((proj, idx) => (
-//             <motion.div
-//               key={idx}
-//               variants={itemVariants}
-//               className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer"
-//             >
-//               {/* Premium glass background */}
-//               <div className="absolute inset-0 glass" />
-              
-//               {/* Gradient overlay on hover */}
-//               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-500/15 group-hover:to-purple-500/15 transition-all duration-700" />
-              
-//               {/* Animated gradient border on hover */}
-//               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
-//                 background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2))',
-//                 padding: '1px'
-//               }} />
-              
-//               {/* Content */}
-//               <div className="relative z-10 h-full flex flex-col justify-between p-8 transition-all duration-500">
-//                 <div>
-//                   <motion.p
-//                     initial={{ opacity: 0 }}
-//                     whileInView={{ opacity: 1 }}
-//                     transition={{ duration: 0.5, delay: 0.1 }}
-//                     viewport={{ once: true }}
-//                     className="text-xs font-medium text-blue-400 uppercase tracking-widest mb-3 group-hover:text-blue-300 transition-colors"
-//                   >
-//                     {proj.category}
-//                   </motion.p>
-//                   <h3 className="text-3xl font-bold mb-2 group-hover:text-blue-200 transition-colors duration-300">
-//                     {proj.title}
-//                   </h3>
-//                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300 mt-4">
-//                     {proj.description}
-//                   </p>
-//                 </div>
-                
-//                 {/* Arrow icon */}
-//                 <motion.div
-//                   initial={{ opacity: 0, y: 10 }}
-//                   whileInView={{ opacity: 1, y: 0 }}
-//                   transition={{ duration: 0.5 }}
-//                   viewport={{ once: true }}
-//                   className="flex items-center gap-2 text-gray-400 group-hover:text-blue-300 transition-colors duration-300"
-//                 >
-//                   <span className="text-sm font-medium">View Project</span>
-//                   <motion.div
-//                     whileHover={{ x: 4, y: -4 }}
-//                     transition={{ duration: 0.2 }}
-//                   >
-//                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h10v10M7 17L17 7" />
-//                     </svg>
-//                   </motion.div>
-//                 </motion.div>
-//               </div>
-              
-//               {/* Top accent line */}
-//               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-//             </motion.div>
-//           ))}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
 'use client';
 
 import { useRef } from 'react';
@@ -143,6 +8,8 @@ interface ProjectData {
   category: string;
   name: string;
   description: string;
+  techStack: string[];
+  repoUrl: string;
   liveUrl?: string;
   gradient: string; // tailwind gradient classes for the placeholder art panel
   accent: string; // tailwind text color for accents
@@ -151,35 +18,47 @@ interface ProjectData {
 const PROJECTS: ProjectData[] = [
   {
     number: '01',
-    category: 'WebGL Experience',
-    name: 'Project One',
-    description: 'Interactive 3D visualization with smooth animations.',
-    gradient: 'from-blue-500/25 to-cyan-500/10',
-    accent: 'text-blue-300',
-  },
-  {
-    number: '02',
-    category: 'E-commerce Platform',
-    name: 'Project Two',
-    description: 'Full-stack solution with real-time updates.',
+    category: 'AI / GenAI Web App',
+    name: 'AI Content Generator',
+    description:
+      'A full-stack app that generates blogs, captions, emails, and product copy using the OpenAI API, with secure auth and content history.',
+    techStack: ['Next.js', 'TypeScript', 'OpenAI API', 'Clerk', 'Neon PostgreSQL'],
+    repoUrl: 'https://github.com/binitnayak/Ai-powered-content-generator',
     gradient: 'from-purple-500/25 to-fuchsia-500/10',
     accent: 'text-purple-300',
   },
   {
+    number: '02',
+    category: 'Full-Stack Dashboard',
+    name: 'Expense Tracker Dashboard',
+    description:
+      'A personal finance dashboard for logging income and expenses, with transaction history, filters, and spend analytics.',
+    techStack: ['React', 'Vite', 'Node.js', 'Neon PostgreSQL', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/binitnayak/Expense-tracker-dashboard',
+    gradient: 'from-emerald-500/25 to-teal-500/10',
+    accent: 'text-emerald-300',
+  },
+  {
     number: '03',
-    category: 'Brand Identity',
-    name: 'Project Three',
-    description: 'Modern design system and component library.',
-    gradient: 'from-pink-500/25 to-rose-500/10',
-    accent: 'text-pink-300',
+    category: 'Landing Page / UI',
+    name: 'Japan Tour',
+    description:
+      'A visually rich travel landing page with smooth GSAP-powered animations and a fully responsive, modern layout.',
+    techStack: ['React', 'Vite', 'TypeScript', 'GSAP', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/binitnayak/japan-tour',
+    gradient: 'from-blue-500/25 to-cyan-500/10',
+    accent: 'text-blue-300',
   },
   {
     number: '04',
-    category: 'Mobile App',
-    name: 'Project Four',
-    description: 'Cross-platform mobile application.',
-    gradient: 'from-emerald-500/25 to-teal-500/10',
-    accent: 'text-emerald-300',
+    category: 'MERN Full-Stack',
+    name: 'Hospital Management System',
+    description:
+      'A hospital management platform with separate patient and admin portals — appointment booking, doctor management, and role-based auth.',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    repoUrl: 'https://github.com/binitnayak/Hospital-Management-System',
+    gradient: 'from-pink-500/25 to-rose-500/10',
+    accent: 'text-pink-300',
   },
 ];
 
@@ -238,17 +117,41 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
                 {project.name}
               </h3>
               <p className="text-gray-400 text-sm md:text-base max-w-md">{project.description}</p>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {project.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[11px] px-2.5 py-1 rounded-full border border-white/10 bg-white/[0.03] text-gray-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
-          <a
-            href={project.liveUrl ?? '#'}
-            target={project.liveUrl ? '_blank' : undefined}
-            rel="noopener noreferrer"
-            className="shrink-0 self-start sm:self-auto w-full sm:w-auto text-center px-6 py-3 rounded-full bg-white text-[#0a0e27] font-semibold text-sm hover:bg-gray-200 transition-colors duration-300 whitespace-nowrap"
-          >
-            View Project →
-          </a>
+          <div className="flex sm:flex-col gap-2 shrink-0 w-full sm:w-auto">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none text-center px-6 py-3 rounded-full bg-white text-[#0a0e27] font-semibold text-sm hover:bg-gray-200 transition-colors duration-300 whitespace-nowrap"
+              >
+                Live Demo →
+              </a>
+            )}
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex-1 sm:flex-none text-center px-6 py-3 rounded-full border border-white/15 font-semibold text-sm hover:bg-white/10 transition-colors duration-300 whitespace-nowrap ${
+                project.liveUrl ? 'text-white' : 'bg-white text-[#0a0e27] hover:bg-gray-200'
+              }`}
+            >
+              View Code →
+            </a>
+          </div>
         </div>
 
         {/* Bottom: placeholder art panel (swap for real screenshots via project.image1/2/3) */}

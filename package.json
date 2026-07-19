@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/react": "^3.0.197",
+    "@ai-sdk/google": "^4.0.18",
+    "@ai-sdk/react": "^4.0.34",
     "@google/generative-ai": "^0.24.1",
-    "ai": "^6.0.195",
+    "ai": "^7.0.31",
     "framer-motion": "^11.18.2",
     "gsap": "^3.15.0",
     "next": "14.2.35",
