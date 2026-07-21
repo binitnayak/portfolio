@@ -46,7 +46,7 @@ export default function Overlay() {
             <span className="text-white">Hi, I&apos;m Binit</span>
           </h1>
           
-          <p className="text-2xl md:text-3xl text-blue-300 font-semibold mb-4 tracking-wide">MERN Stack Developer</p>
+          <p className="text-2xl md:text-3xl text-blue-300 font-semibold mb-4 tracking-wide">Full-Stack Developer | Shipping Production Apps</p>
           
           <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed mb-8">
             I build fast, scalable, and interactive web applications with modern technologies.
